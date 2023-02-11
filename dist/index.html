@@ -7,9 +7,41 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="content">
-        
-    </div>
+    <div class="content"> 
+   <form id="task-form">
+    <div>
+    <label for="title">Titile:</label>
+    <input type="text" placeholder="Name of Task" id="title" required>
+</div>
+
+<div>
+    <label for="description">Description:</label>
+    <input type="text" placeholder="Description of task" id="description" required>
+</div>
+
+<div>
+    <select name="priority" id="priority" form="task-form" required>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+    </select>
+</div>
+
+<div>
+    <label for="notes">Notes:</label>
+    <textarea name="notes" id="notes"></textarea>
+</div>
+
+<div>
+    <label for="date">Due Date:</label>
+    <input type="date" id="date" name="date">
+</div>
+
+<button type="submit" form="task-form" >Submit</button>
+    </form>
+
+    
+</div>
     <script src="main.js"></script>
 </body>
 </html>
