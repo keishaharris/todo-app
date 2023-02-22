@@ -1,0 +1,114 @@
+@font-face {
+    font-family: minomu;
+    src: url('assets/fonts/minomulight-l3xgn.otf');
+    font-size: 16px;
+}
+:root{
+    font-family: minomu;
+    font-size: 16px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display:grid;
+    grid-template-columns: 1.5fr 5fr;
+    grid-template-rows: 0.5fr 7fr;
+    grid-template-areas:
+    "header header"
+    "sidebar main";
+    min-height: 100vh;
+    width: 100vw;
+}
+
+/* --------- Header Styling --------- */
+
+header{
+    grid-area: header;
+    background-color: #37976F;
+    padding-left:7px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width: 100vw;
+}
+
+.navIcons{
+    width: 150%;
+    height:auto;
+}
+.navIcons:hover{
+    cursor:pointer;
+}
+
+
+
+.logo{
+    color:#fff;
+    font-size: calc(0.5rem + 1vw);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+   
+}
+
+.logoIcon{
+    width: 3%;
+    height:auto;
+    
+}
+
+
+.filter{
+    filter: invert(100%) sepia(4%) saturate(686%) hue-rotate(199deg) brightness(117%) contrast(100%)
+}
+
+.searchIcon{
+    width: 3%;
+    height:auto;
+}
+
+/* -------Navigation Styling-------- */
+nav{
+    display: flex;
+    background-color: #F2F4F3;
+    padding: 50px 20px 0px 30px;
+    grid-area: sidebar;
+}
+
+li{
+    text-transform: uppercase;
+    list-style-type: none;
+    letter-spacing: 1px;
+    font-size: calc(0.5rem + 1vw);
+    padding: 10px 0px 0px 10px;
+    margin-top: 5px;
+    filter: invert(33%) sepia(0%) saturate(1203%) hue-rotate(139deg) brightness(104%) contrast(91%);
+    
+}
+li:hover{
+    filter:none;
+    background-color: #EBECA4;
+}
+
+.sidebarCtn{
+    padding-bottom: 30px;
+}
+.sidebarIcons{
+    width: 10%;
+    height: auto;
+}
+
+/* --------Main Content Styling-------- */
+
+main{
+    grid-area: main;
+    padding: 30px;
+}
+
+.pForm{
+    display: none;
+}
+

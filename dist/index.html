@@ -4,31 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
+
+    <div class="container">
     <header>
-        <div class="">
+        <div class="navCtn">
+            <img src="assets/icons/navigation.svg" class="navIcons filter" alt="navigation Icon">
+        </div>
 
-        </div>ThIS IS WHERE THE HEADER GOES
-
+        <div class="logoCtn">
+        <p class="logo">
+            <img src="assets/icons/bunny-rabbit-icon.svg" class="logoIcon filter" alt="sedentary rabbit">
+            Productivity Rabbit</p> 
+        </div>
+       
+        <div class="searchBarCtn">
+            <input type="search">
+            <img src="assets/icons/searchBar.svg" class="searchIcon" alt="magnifying glass">
+        </div>
     </header>
-    <div id="content"> 
+
+    <nav>
+
+        <ul>
+            <div class="sidebarCtn">
+        <li>
+            <img src="assets/icons/inbox.svg" class="sidebarIcons" alt="open inbox">
+            Inbox
+        </li>
+        <li>
+            <img src="assets/icons/today.svg" class="sidebarIcons" alt="calendar">
+            TODAY
+        </li>
+        <li>
+            <img src="assets/icons/deadline.svg" class="sidebarIcons" alt="calendar with deadline">
+            UPCOMING
+        </li>
+        <li>
+            <img src="assets/icons/complete.svg" class="sidebarIcons" alt="circled checkmark">
+            COMPLETED
+        </li>
+        </div>
+        <li>
+            <p class="">Projects</p>
+            
+            <p class="add">+ Create a New Project</p>
+        </li>
+
+    </ul>
+
+    </nav>
+    
+    <main id="content"> 
 
  <!-- PROJECT FORM  -->
+ <div class="pForm">
         <form id="project-form">
+
             <h1> Add a Project</h1>
             <div>
                 <label for="pTitle">Project Title</label>
                 <input type="text" placeholder="Add a Title" id="pTitle" required>
             </div>
             <button type="submit" form="project-form" >Submit</button>
-        </form>
-
+ 
+     </div>
 
 <!-- TASK FORM -->
-
-            <form id="task-form">
+        <div class="tForm">
+           
                 <h1> Add a Task </h1>
                 <div>
                 <label for="title">Titile:</label>
@@ -60,7 +107,9 @@
 
             <button type="submit" form="task-form" >Submit</button>
                 </form>
+            </div>
 
+            </main>
 
         </div>
     <script src="main.js"></script>
