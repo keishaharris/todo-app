@@ -17,20 +17,22 @@
 
         <div class="logoCtn">
         <p class="logo">
-            <img src="assets/icons/bunny-rabbit-icon.svg" class="logoIcon filter" alt="sedentary rabbit">
+
+            <!-- <img src="assets/icons/bunny-rabbit-icon.svg" class="logoIcon filter" alt="sedentary rabbit"> -->
+
             Productivity Rabbit</p> 
         </div>
        
         <div class="searchBarCtn">
             <input type="search">
-            <img src="assets/icons/searchBar.svg" class="searchIcon" alt="magnifying glass">
+            <!-- <img src="assets/icons/searchBar.svg" class="searchIcon" alt="magnifying glass"> -->
         </div>
     </header>
 
     <nav>
 
         <ul>
-            <div class="sidebarCtn">
+            <div class="sidebarCtn" id="sidebarCtn">
         <li>
             <img src="assets/icons/inbox.svg" class="sidebarIcons" alt="open inbox">
             Inbox
@@ -48,12 +50,15 @@
             COMPLETED
         </li>
         </div>
-        <li>
-            <p class="">Projects</p>
-            
-            <p class="add">+ Create a New Project</p>
-        </li>
+    
+            <p class="projectSidebarTitle">Projects</p>
+            <li> 
+            <p id="add">+ Create a Project</p>
+            </li>
 
+            <div id="projectList">
+
+            </div>
     </ul>
 
     </nav>
@@ -61,24 +66,27 @@
     <main id="content"> 
 
  <!-- PROJECT FORM  -->
- <div class="pForm">
+ <div class="pForm" id="pForm">
         <form id="project-form">
 
-            <h1> Add a Project</h1>
-            <div>
+            <div class="projectHeader">
+            <p> Add Project</p>
+            </div>
+            <div class="projectMain">
                 <label for="pTitle">Project Title</label>
                 <input type="text" placeholder="Add a Title" id="pTitle" required>
-            </div>
+            <br>
             <button type="submit" form="project-form" >Submit</button>
+        </div>
  
      </div>
 
 <!-- TASK FORM -->
-        <div class="tForm">
+        <!-- <div class="tForm">
            
                 <h1> Add a Task </h1>
                 <div>
-                <label for="title">Titile:</label>
+                <label for="taskTitle">Titile:</label>
                 <input type="text" placeholder="Name of Task" id="title" required>
             </div>
 
@@ -107,7 +115,7 @@
 
             <button type="submit" form="task-form" >Submit</button>
                 </form>
-            </div>
+            </div> -->
 
             </main>
 

@@ -30,6 +30,7 @@ header{
     grid-area: header;
     background-color: #37976F;
     padding-left:7px;
+    padding-right:7px;
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -95,10 +96,20 @@ li:hover{
 
 .sidebarCtn{
     padding-bottom: 30px;
+    border-bottom: 2px solid gray;
 }
 .sidebarIcons{
     width: 10%;
     height: auto;
+}
+
+.projectSidebarTitle{
+    text-align:center;
+    margin-top: 35px;
+    font-size: calc(1rem + 1vw);
+    color:#37976F;
+    text-transform: uppercase;
+    
 }
 
 /* --------Main Content Styling-------- */
@@ -110,5 +121,35 @@ main{
 
 .pForm{
     display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0%;
+    top: 0%;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+    font-size: 20px;
 }
 
+#project-form{
+    background: #fff;
+    margin: 15% auto;
+    width: 30%;
+    text-align:center;
+}
+
+.projectHeader{
+    background-color: #37976F;
+    padding: 10px;
+    color: #fff;
+}
+
+.projectMain{
+    padding:10px;
+}
+
+label{
+    font-size: 14px;
+}

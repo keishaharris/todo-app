@@ -7,19 +7,18 @@ const View = (() => {
 const projectTitle = document.getElementById('pTitle').value
 
 
-// Task Elements 
+// // Task Elements 
 
-const taskTitle = document.getElementById('title').value;
-const description = document.getElementById('description').value;
-const priority = document.getElementById('priority').value;
-const notes = document.getElementById('notes').value;
-const dueDate = document.getElementById('date').value;
+// const taskTitle = document.getElementById('title').value;
+// const description = document.getElementById('description').value;
+// const priority = document.getElementById('priority').value;
+// const notes = document.getElementById('notes').value;
+// const dueDate = document.getElementById('date').value;
 
 
 
 //Dom Elements
-
-let content = document.getElementById('content');
+let projectContent = document.getElementById('projectList');
 
 //CLEAR form
 function clearForm(e){
@@ -27,17 +26,25 @@ function clearForm(e){
 }
 
 function renderProjects(){
-    let projectContent = document.getElementById('content');
+  
+    projectContent.innerHTML = '';
 
     projects.projectList.forEach(project => {
-        projectContent.innerHTML = project.title;
+        let projectDiv = document.createElement('div');
+        let li = document.createElement('li');
+        let h1 = document.createElement('h1');
+        h1 = project.title;
+        li.append(h1);
+        projectDiv.append(li);
+        projectContent.append(projectDiv);
+        
     })
 
 }
 
 return {
     renderProjects,
-    clearForm
+    clearForm,
 }
 
 })();
